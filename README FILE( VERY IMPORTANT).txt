@@ -1,0 +1,60 @@
+# Hospital Management System (Apex Medical Institute)
+
+This is a web-based Hospital Management System built using PHP and MySQL. Follow the steps below to set up and run the project on your local machine.
+
+## 📋 Prerequisites
+
+To run this project, you need a local server environment. We recommend **XAMPP**.
+
+### Step 1: Download and Install XAMPP
+1. Go to the [official Apache Friends website](https://www.apachefriends.org/index.html).
+2. Download the version of XAMPP suitable for your operating system (Windows, Linux, or macOS).
+3. Install the software.
+4. Once installed, open the **XAMPP Control Panel**.
+5. Click **Start** next to **Apache** and **MySQL**. Ensure both turn green.
+
+---
+
+## 📂 Project Setup
+
+### Step 2: Place Project Files
+1. Navigate to your XAMPP installation folder (usually `C:\xampp\` on Windows).
+2. Open the `htdocs` folder.
+3. Create a new folder inside `htdocs` and name it `hms` (or any name you prefer).
+4. Copy all the project files (`index.php`, `admin-panel.php`, `css/`, `images/`, etc.) into this new folder.
+
+---
+
+## 🗄️ Database Setup
+
+### Step 3: Create and Import Database
+1. Open your web browser and type: `http://localhost/phpmyadmin/`
+2. Click on the **Databases** tab.
+3. In the "Create database" field, type exactly:
+   `myhmsdb`
+   *(Note: The name must be exact as it is hardcoded in the connection files)*.
+4. Click **Create**.
+5. Click on the newly created `myhmsdb` database on the left sidebar.
+6. Click the **Import** tab in the top menu.
+7. Click **Choose File** and select the `myhmsdb.sql` file from your project folder.
+8. Scroll down and click **Go** (or Import). You should see a success message indicating the tables have been created.
+
+---
+
+## 🚀 How to Run
+
+### Step 4: Launch the Application
+1. Open your web browser (Chrome, Firefox, Edge, etc.).
+2. In the address bar, type the following URL:
+   `http://localhost/hms/index.php`
+   *(Note: If you named your folder something other than `hms` in Step 2, replace `hms` with that name)*.
+
+### Step 5: Usage
+* **Patient:** You can register a new account on the home page and log in.
+* **Doctor/Admin:** Use the credentials provided in the database (or register new ones if the features exist).
+
+---
+
+## 🛠️ Troubleshooting
+* **Database Error:** If you see a connection error, ensure XAMPP MySQL is running and the database name in phpMyAdmin matches `myhmsdb`.
+* **404 Not Found:** Ensure you pasted the files into the correct `htdocs` folder and are using the correct folder name in the URL.

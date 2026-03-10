@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us - Apex Medical</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/comp.png" />
+    
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="contact.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    
+    <script>
+        function alphaOnly(event) {
+            var key = event.keyCode;
+            return ((key >= 65 && key <= 90) || key == 8 || key == 32);
+        };
+    </script>
+
+    <style>
+        body {
+            background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+            font-family: 'IBM Plex Sans', sans-serif;
+        }
+
+        /* 1. Navbar Styles (Fixed for Visibility) */
+        .navbar {
+            background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 15px 20px;
+        }
+        
+        .navbar-brand h4 {
+            color: white;
+            font-weight: bold;
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+        }
+
+        .nav-link {
+            color: #ffffff !important;
+            font-weight: 700 !important;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 1 !important;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #ffdddd !important;
+            transform: translateY(-2px);
+        }
+
+        /* 2. Contact Form Card */
+        .contact-form {
+            background: #fff;
+            border-radius: 1rem; /* Rounded corners */
+            padding: 40px;
+            margin-top: 120px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* Soft shadow */
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 0.8s both; /* Slide up animation */
+        }
+
+        .contact-form h3 {
+            color: #3931af;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        /* 3. Input Fields */
+        .form-control {
+            border-radius: 0.5rem;
+            height: 50px;
+            border: 1px solid #ced4da;
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+        
+        /* Cyan Glow on Focus */
+        .form-control:focus {
+            border-color: #00c6ff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 198, 255, 0.25);
+        }
+
+        textarea.form-control {
+            height: 150px;
+            resize: none; /* Prevents resizing breaking the layout */
+        }
+
+        /* 4. Button Styling */
+        .btnContact {
+            width: 100%;
+            border: none;
+            border-radius: 50px; /* Pill shape */
+            padding: 12px;
+            background: #00c6ff; /* Cyan Theme Color */
+            font-weight: 700;
+            color: #fff;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 198, 255, 0.4);
+        }
+
+        .btnContact:hover {
+            background: #0099cc;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 198, 255, 0.5);
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translate3d(0, 40px, 0); }
+            to { opacity: 1; transform: none; }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .contact-form {
+                width: 90%;
+                margin-top: 100px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="index.php">
+                <h4><i class="fa fa-heartbeat" aria-hidden="true"></i>&nbsp Apex Medical Institute</h4>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" style="margin-right: 20px;">
+                        <a class="nav-link js-scroll-trigger" href="index.php">Home</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 20px;">
+                        <a class="nav-link js-scroll-trigger" href="services.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container contact-form">
+        <form method="post" action="contact.php">
+            <h3>Drop Us a Message</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="txtName" class="form-control" placeholder="Your Name *" value="" onkeydown="return alphaOnly(event);" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="txtEmail" class="form-control" placeholder="Your Email *" value="" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="txtPhone" class="form-control" placeholder="Your Phone Number *" value="" minlength="10" maxlength="10" required />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <textarea name="txtMsg" class="form-control" placeholder="Your Message *" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

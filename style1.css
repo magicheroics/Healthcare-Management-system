@@ -1,0 +1,177 @@
+body {
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    background-size: cover;
+}
+
+.register{
+    
+    margin-top: 3%;
+    padding: 3%;
+}
+.register-left {
+    text-align: center;
+    color: #fff;
+    /* These 3 lines vertically center the content: */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; 
+}
+.register-left input{
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    width: 60%;
+    background: #f0f8ff;
+    font-weight: bold;
+    color: #383d41;
+    margin-top: 30%;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+.register-right{
+    background: #f0f8ff;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.register-left img{
+    margin-top: 15%;
+    margin-bottom: 5%;
+    width: 25%;
+    -webkit-animation: mover 2s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+.register-left p{
+    font-weight: lighter;
+    padding: 12%;
+    margin-top: -9%;
+}
+.register .register-form{
+    padding: 10%;
+    margin-top: 10%;
+}
+.btnRegister {
+    /* Center the button */
+    display: block;
+    margin: 10% auto 0 auto; /* auto on left/right centers it */
+    float: none; /* Removes the "float right" setting */
+    
+    /* Styling */
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    background: #00c6ff; /* Your new cyan color */
+    color: #fff;
+    font-weight: 600;
+    width: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btnRegister:hover {
+    background: #0099cc; /* A slightly darker blue to indicate interaction */
+    color: #fff;
+    cursor: pointer;
+}
+
+.register .nav-tabs {
+    width: 85%;  /* Increase from 70% to 85% */
+    /* keep other existing styles... */
+}
+
+.register .nav-tabs .nav-link {
+    /* existing styles... */
+    padding: 10px 15px;      /* Reduces side padding slightly to make room */
+    white-space: nowrap;     /* Prevents text from wrapping to a second line */
+    font-size: 13px;         /* Slightly smaller font to fit the long name */
+    flex-grow: 1;            /* Ensures all buttons take equal space */
+    min-width: fit-content;  /* Forces the box to be at least as wide as the text */
+}
+
+.register .nav-tabs .nav-link:hover{
+    border: none;
+}
+.register .nav-tabs .nav-link.active {
+    width: auto;              /* Let flexbox handle the width */
+    color: #00c6ff;           /* Blue text for contrast */
+    background: #fff;         /* White background for the active tab */
+    border: none;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Adds a subtle 3D shadow pop */
+}
+
+.register-heading {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 30px;  /* Adds clean space below the title */
+    color: #495057;       /* Dark gray text for readability */
+    font-size: 2.5rem;    /* Makes the text much larger */
+    font-weight: 700;     /* Makes the text bold */
+    text-transform: uppercase; /* Optional: Makes it look more like a headline */
+    letter-spacing: 1px;  /* Adds slight spacing between letters */
+}
+
+.form-control {
+    height: 50px;       /* Increases the height (standard is usually ~38px) */
+    padding: 10px 20px; /* Adds comfortable internal spacing */
+    font-size: 1.1rem;  /* Makes the text inside slightly larger */
+    border-radius: 0.75rem; /* Ensures the corners stay rounded */
+}
+
+/* 1. Space out the container */
+.maxl {
+    margin: 25px 0;     /* Adds space above and below the buttons */
+    display: flex;      /* Aligns items nicely */
+    gap: 20px;          /* Adds space between Male and Female */
+}
+
+/* 2. Hide the old tiny radio dot */
+.radio input[type="radio"] {
+    display: none;      /* Makes the dot invisible */
+}
+
+/* 3. Style the "Male" and "Female" text labels as buttons */
+.radio span {
+    padding: 10px 30px;         /* Makes the button big and clickable */
+    border: 2px solid #00c6ff;  /* Cyan border */
+    border-radius: 50px;        /* Pill shape */
+    color: #00c6ff;             /* Cyan text */
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;  /* Smooth color change */
+    display: inline-block;
+}
+
+/* 4. Style the "Selected" state (Active) */
+.radio input[type="radio"]:checked + span {
+    background: #00c6ff;        /* Fills with Cyan */
+    color: #fff;                /* Text turns White */
+    box-shadow: 0 4px 10px rgba(0, 198, 255, 0.4); /* Adds a glow effect */
+}
+
+/* Target the link inside the registration form */
+.register-form a {
+    display: block;          /* Makes the link fill the width so it can be centered */
+    text-align: center;      /* Centers the text */
+    margin-top: 20px;        /* Adds space between the buttons and this link */
+    font-size: 1.2rem;       /* Makes the text larger (approx 19px) */
+    color: #495057;          /* Professional dark gray */
+    font-weight: 600;        /* Makes it bold */
+    text-decoration: none;   /* Removes the default underline */
+    transition: color 0.3s ease;
+}
+
+/* Add a hover effect */
+.register-form a:hover {
+    color: #00c6ff;          /* Turns your theme Cyan color when hovered */
+    text-decoration: underline; /* Adds the underline back on hover */
+}

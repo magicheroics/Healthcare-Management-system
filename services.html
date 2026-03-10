@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Apex Medical</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="images/comp.png" />
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link href="vendor/fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/animate.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+  <style>
+    /* 1. Global Theme (Matches Contact Page) */
+    body {
+        background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+        font-family: 'IBM Plex Sans', sans-serif;
+        color: #fff; /* Default text white for contrast on gradient */
+    }
+
+    /* 2. Navigation (Exact copy from Contact Page) */
+    .navbar {
+        background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        padding: 15px 20px;
+    }
+    .navbar-brand h4 {
+        color: white;
+        font-weight: bold;
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+    }
+    .nav-link {
+        color: #ffffff !important;
+        font-weight: 700 !important;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        opacity: 1 !important;
+        transition: all 0.3s ease;
+    }
+    .nav-link:hover {
+        color: #ffdddd !important;
+        transform: translateY(-2px);
+    }
+    .nav-item.active .nav-link {
+        color: #fff;
+        background: rgba(255,255,255,0.2);
+        border-radius: 20px;
+    }
+
+    /* 3. Cards & Boxes (The "Modern" Look) */
+    .feature-card {
+        background: #fff;
+        border-radius: 1rem;
+        padding: 30px 20px;
+        text-align: center;
+        color: #555;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        height: 100%;
+    }
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 198, 255, 0.3);
+    }
+    .feature-card i {
+        color: #00c6ff;
+        margin-bottom: 15px;
+    }
+    .feature-card h4 {
+        font-weight: bold;
+        color: #3931af;
+        margin-bottom: 10px;
+    }
+
+    /* 4. Service Lists (White cards for readability) */
+    .service-box {
+        background: #fff;
+        border-radius: 1rem;
+        padding: 20px;
+        margin-bottom: 20px;
+        color: #555;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+    }
+    .service-box:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .service-icon {
+        margin-right: 20px;
+        color: #00c6ff;
+        font-size: 2.5rem;
+    }
+    .service-desc h5 {
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 5px;
+        font-size: 1.1rem;
+    }
+    .service-desc p {
+        font-size: 0.9rem;
+        margin: 0;
+        color: #777;
+    }
+
+    /* 5. Buttons */
+    .btn-custom {
+        background: #fff;
+        color: #00c6ff;
+        font-weight: bold;
+        border-radius: 50px;
+        padding: 10px 30px;
+        border: none;
+        transition: all 0.3s ease;
+    }
+    .btn-custom:hover {
+        background: #f0f8ff;
+        color: #3931af;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        text-decoration: none;
+    }
+
+    /* 6. Footer */
+    footer {
+        padding: 50px 0;
+        color: rgba(255,255,255,0.8);
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    footer h5 {
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    footer a {
+        color: rgba(255,255,255,0.8);
+    }
+    footer a:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+    .social-icons a {
+        color: #fff;
+        margin-right: 15px;
+        font-size: 1.2rem;
+    }
+  </style>
+</head>
+
+<body id="page-top">
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="index.php">
+        <h4><i class="fa fa-heartbeat" aria-hidden="true"></i>&nbsp Apex Medical Institute</h4>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item" style="margin-right: 20px;">
+            <a class="nav-link js-scroll-trigger" href="index.php">Home</a>
+          </li>
+          <li class="nav-item active" style="margin-right: 20px;">
+            <a class="nav-link js-scroll-trigger" href="services.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" style="margin-top: 150px; margin-bottom: 50px;">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="wow fadeInDown">
+          <h1 style="font-weight: 700; font-size: 3rem;">Apex Medical Institute</h1>
+          <h4 style="font-weight: 300; opacity: 0.9; margin-bottom: 30px;">Provide best quality healthcare for you</h4>
+        </div>
+        <div class="wow fadeInRight">
+          <ul class="list-unstyled" style="font-size: 1.1rem; line-height: 2;">
+            <li><i class="fa fa-check-circle" style="color: #fff;"></i> Affordable monthly premium packages</li>
+            <li><i class="fa fa-check-circle" style="color: #fff;"></i> Choose your favourite services</li>
+            <li><i class="fa fa-check-circle" style="color: #fff;"></i> Only use friendly environment</li>
+          </ul>
+          <br>
+          <a href="#" class="btn-custom">Learn more <i class="fa fa-angle-right"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center">
+        <div class="wow fadeInUp">
+          <img src="img/dummy/img-5.png" class="img-fluid" alt="" style="border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="boxes" style="padding: 50px 0;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="feature-card wow fadeInUp" data-wow-delay="0.1s">
+            <i class="fa fa-calendar-check-o fa-3x"></i>
+            <h4>Appointments</h4>
+            <p>Book your consultation easily online or call our 24/7 support line.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="feature-card wow fadeInUp" data-wow-delay="0.3s">
+            <i class="fa fa-list-alt fa-3x"></i>
+            <h4>Packages</h4>
+            <p>Select from our affordable health checkup plans tailored to your needs.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="feature-card wow fadeInUp" data-wow-delay="0.5s">
+            <i class="fa fa-user-md fa-3x"></i>
+            <h4>Specialists</h4>
+            <p>Receive expert care and treatment plans from board-certified specialists.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="feature-card wow fadeInUp" data-wow-delay="0.7s">
+            <i class="fa fa-file-text-o fa-3x"></i>
+            <h4>Reports</h4>
+            <p>Access your comprehensive medical reports securely online within 24 hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="service" style="padding: 50px 0;">
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-lg-6 col-md-12 mb-4">
+          <div class="wow fadeInLeft">
+            <img src="img/dummy/img-4.png" class="img-fluid mb-4" alt="" style="border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
+            <img src="img/dummy/img-3.png" class="img-fluid" alt="" style="border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="service-box wow fadeInRight" data-wow-delay="0.1s">
+                <div class="service-icon"><span class="fa fa-stethoscope"></span></div>
+                <div class="service-desc">
+                  <h5>Checkups</h5>
+                  <p>Routine health screenings.</p>
+                </div>
+              </div>
+              <div class="service-box wow fadeInRight" data-wow-delay="0.2s">
+                <div class="service-icon"><span class="fa fa-wheelchair"></span></div>
+                <div class="service-desc">
+                  <h5>Nursing</h5>
+                  <p>Compassionate care.</p>
+                </div>
+              </div>
+              <div class="service-box wow fadeInRight" data-wow-delay="0.3s">
+                <div class="service-icon"><span class="fa fa-plus-square"></span></div>
+                <div class="service-desc">
+                  <h5>Pharmacy</h5>
+                  <p>In-house medicine.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="service-box wow fadeInRight" data-wow-delay="0.4s">
+                <div class="service-icon"><span class="fa fa-h-square"></span></div>
+                <div class="service-desc">
+                  <h5>Gyn Care</h5>
+                  <p>Women's health services.</p>
+                </div>
+              </div>
+              <div class="service-box wow fadeInRight" data-wow-delay="0.5s">
+                <div class="service-icon"><span class="fa fa-user-circle-o"></span></div>
+                <div class="service-desc">
+                  <h5>Neurology</h5>
+                  <p>Advanced brain care.</p>
+                </div>
+              </div>
+              <div class="service-box wow fadeInRight" data-wow-delay="0.6s">
+                <div class="service-icon"><span class="fa fa-heartbeat"></span></div>
+                <div class="service-desc">
+                  <h5>Sleep Center</h5>
+                  <p>Therapy for disorders.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="wow fadeInDown">
+            <h5>About Apex Medical</h5>
+            <p>A state-of-the-art facility providing compassionate, world-class medical care with advanced technology and expert specialists.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="wow fadeInDown">
+            <h5>Contact Info</h5>
+            <ul class="list-unstyled">
+              <li><i class="fa fa-calendar-o"></i> Mon - Sat, 8am to 10pm</li>
+              <li><i class="fa fa-phone"></i> +254 712 345678</li>
+              <li><i class="fa fa-envelope-o"></i> apex_medical@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="wow fadeInDown">
+            <h5>Follow Us</h5>
+            <p>Nairobi, Kenya</p>
+            <div class="social-icons">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-google-plus"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+</body>
+</html>
